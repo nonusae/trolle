@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20170829013421) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "notes", force: :cascade do |t|
     t.text "message"
-    t.integer "project_id"
-    t.integer "user_id"
+    t.bigint "project_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "attachment_file_name"
@@ -32,13 +35,13 @@ ActiveRecord::Schema.define(version: 20170829013421) do
     t.date "due_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
-    t.integer "project_id"
+    t.bigint "project_id"
     t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -66,4 +69,8 @@ ActiveRecord::Schema.define(version: 20170829013421) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "notes", "projects"
+  add_foreign_key "notes", "users"
+  add_foreign_key "projects", "users"
+  add_foreign_key "tasks", "projects"
 end
