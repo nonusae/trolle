@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  password: vgw12345
+
+development:
+  <<: *default
+  database: trolle_development
+
+
+
+
+
+
+
+test:
+  <<: *default
+  database: trolle_test
+
+production:
+  <<: *default
+  database: trolle_production
+  username: trolle
+  password: <%= ENV['DEPOT_DATABASE_PASSWORD'] %>
