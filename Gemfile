@@ -23,6 +23,8 @@ group :development, :test do
 end
 
 group :test do
+    gem 'vcr'
+    gem 'webmock'
     gem 'capybara', '~> 2.13.0'
     gem 'launchy', '~> 2.4.3'
     gem 'shoulda-matchers',

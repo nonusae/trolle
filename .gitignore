@@ -27,3 +27,4 @@
 # Ignore uploads from Paperclip
 /public/system
 /spec/test_uploads
+/spec/cassettes
