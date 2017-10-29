@@ -1,3 +1,6 @@
+# Trolle Project Manager System
+
+
 Role: Main developer
 
 Trolle is a project management application. While it’s not as powerful or polished as Trello or Basecamp, it’s got just enough features that project manager application would have. This project develop with TDD using RSpec and Capybara 's features. 
