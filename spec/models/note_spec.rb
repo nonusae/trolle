@@ -14,6 +14,8 @@ RSpec.describe Note, type: :model do
     )
   end
 
+  it { is_expected.to have_attached_file(:attachment) }
+
   it "is valid with a user, project, and message" do
     note = Note.new(
       message: "This is a sample note.",
@@ -63,5 +65,7 @@ RSpec.describe Note, type: :model do
         expect(Note.search("message")).to be_empty
       end
     end
+
   end
+
 end
