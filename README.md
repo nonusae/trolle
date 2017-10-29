@@ -7,10 +7,10 @@ Trolle is a project management application. While it’s not as powerful or poli
 
 
 App url : [here](https://trolle-app.herokuapp.com)
-App repo : [here](https://github.com/nonusae/trolle)
 
 
 
-##Project Stats
+
+## Project Stats
 
 ![alt text]( https://i.imgur.com/qGefDsA.png "Logo Title Text 1")
