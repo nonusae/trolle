@@ -22,4 +22,14 @@ RSpec.feature "Projects", type: :feature do
       end
     }.to change(user.projects, :count).by(1)
   end
+
+  scenario "user completes a project" do
+    # given a user with a project
+    # and that the user in logged in
+    # when the user visites the project page
+    # and the user clicks the "compleate" button
+    # then the project is marked as completed
+
+  end
+
 end
